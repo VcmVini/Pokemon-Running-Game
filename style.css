@@ -1,0 +1,80 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #1da303;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#05a3ff, #ccfcff);
+}
+
+.trainer {
+    position: absolute;
+    bottom: 0;
+    width: 200px; 
+    animation: trainer-animation 1.5s infinite linear;
+}
+
+.pikachu {
+    width: 110px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 15s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes trainer-animation {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    
+    20% {
+        bottom: 150px;
+    }
+
+    30% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 200px;
+    }
+    80% {
+        bottom: 170px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
